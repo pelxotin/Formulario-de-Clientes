@@ -1,0 +1,64 @@
+.header {
+
+    background-color: #4c6baf;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.topnav {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   margin-bottom: 30px;
+}
+
+
+
+.topnav a {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, trasform 0.2s ease;
+
+}
+
+
+.topnav a:hover  {
+background-color: #2980b9;
+transform: scale(1.05);
+
+}
+
+
+
+:host {
+    display: block;
+    background-color: #2c2c2c;
+    color: white;
+    min-width: 100vh;
+}
+
+.mensagem {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+.baixo{
+    background-color: #2c2c2c;
+    color: white;
+    text-align: center;
+    padding: 15px 0 ;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+}

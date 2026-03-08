@@ -1,0 +1,11 @@
+
+<form (ngSubmit)="salvarCliente()">
+  
+  <input type="text" placeholder="Nome" [(ngModel)]="cliente.nome" name="nome"/>
+  <input type="email" placeholder="Email"[(ngModel)]="cliente.email" name="email" />
+  <input type="date" placeholder="Data de Nascimento" [(ngModel)]="cliente.datanascimento" name="datanascimento" />
+  <input type="tel" placeholder="Telefone" [(ngModel)]="cliente.telefone" name="telefone"/>
+
+
+  <button type="submit">Salvar</button>
+</form>

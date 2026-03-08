@@ -1,0 +1,70 @@
+<div class="container">
+
+  <!-- Formulário de consulta -->
+  <form #consulta="ngForm" (ngSubmit)="pesquisarCliente()">
+    <div class="row">
+
+      <div class="col-10">
+        <label for="consulta">Consulta:</label>
+      </div>
+
+      <div class="col-70">
+       <input
+  type="text"
+  name="consulta"
+  id="consulta"
+  [(ngModel)]="nomeBusca"
+  (keyup)="pesquisarCliente()"
+  placeholder="Digite o nome aqui!"
+/>
+      </div>
+
+      <div class="col-30">
+        <button type="submit">Consultar</button>
+      </div>
+
+    </div>
+  </form>
+
+  <!-- Tabela de clientes -->
+  <table>
+
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Telefone</th>
+        <th>Data de Nascimento</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let cliente of listaClientes">
+
+        <td>{{ cliente.nome }}</td>
+        <td>{{ cliente.email }}</td>
+        <td>{{ cliente.telefone }}</td>
+        <td>{{ cliente.datanascimento }}</td>
+
+        <td>
+          <button class="btn-editar" (click)="preparaEditar(cliente.id)">
+            ✏️ Editar
+          </button>
+
+          <button class="btn-deletar" (click)="deletar(cliente.id)">
+            🗑️ Deletar
+          </button>
+        </td>
+
+      </tr>
+    </tbody>
+
+  </table>
+
+  <!-- Mensagem quando não tiver clientes -->
+  <p *ngIf="listaClientes.length == 0">
+    Nenhum cliente encontrado
+  </p>
+
+</div>
